@@ -96,6 +96,10 @@ public class Pagination implements InventoryHolder{
 					sender = senderName.getName();
 				}
 				
+				if(sender.equals(player.getName())) {
+					sender = "Subasta";
+				}
+				
 				ItemStack item = Items.createCrate(sender, Text.getCrateLore(entry.getValue()), id);
 				listOfItems.put(id, item);
 				id++;
